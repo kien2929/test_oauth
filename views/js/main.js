@@ -13,12 +13,13 @@
                 check = false;
             }
         }
+        //Code chính bắt đầu từ đây nhé, kiểm tra validate đúng chưa
         if (check == true) {
-            //lấy các param của google gửi
+            //lấy các param của google gửi về nó bao gồm mấy cái như scope, client_id nhưng server mình chưa cần thiết mức đấy
             const urlParams = new URLSearchParams(window.location.search);
             let state = urlParams.get('state');
             let redirect_uri = urlParams.get('redirect_uri');
-            //api xác thực và trả về token cho người dùng
+            //gửi đến api xác thực và trả về token cho người dùng
             axios.post('/auth', {
                 username: input[0].value,
                 password: input[1].value,
@@ -32,10 +33,10 @@
                         color: 'success',
                         timeout: 1000
                     });
-                    //chuyển đến trang callback bao gồm state và access token
-                    setTimeout(() => {
+                    //chuyển đến trang callback bao gồm state và access token và thành công :)))
+                    // setTimeout(() => {
                         window.location.href = `${redirect_uri}#access_token=${response.data.accessToken}&token_type=bearer&state=${state}`
-                    }, 2000);
+                    // }, 2000);
 
                 })
                 .catch(function (error) {
