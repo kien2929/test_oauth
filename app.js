@@ -2,10 +2,10 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT;
 const jwtHelper = require('./jwtHelper');
 require('dotenv').config();
-const accessTokenSecret = "SeCrEt";
+const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
