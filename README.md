@@ -38,6 +38,7 @@
 7.Trong **Configure your client(optimal)** 
   * cái này là scope, đối với các hệ thống như **google** hay **facebook** thì mình cần điền cái này để yêu cầu các quyền truy cập
   * sau này nó sẽ trả về mã token có thể truy cập vào các quyền đấy
+
 8.**Testing instructions**
     Điền cái gì cũng được :)))
 
