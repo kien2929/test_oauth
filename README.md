@@ -31,9 +31,15 @@
 
 ![Configure](https://developers.google.com/assistant/identity/images/configure_oauth_implicit.png)
 
-6.Trong **Client Information**:
+6.Trong **OAuth Client Information**:
   * Điền Client ID được xác định để nhận các request từ trang đăng nhâp.*(cái này điền tùy mục đích, server mình không dùng nhiều việc nên điền lung tung cũng được)* :)
   * Điền URL dùng để Authorization *(~ lấy lúc chạy ngrok nhé)*
 
-7.Ấn **Save**
+7.Trong **Configure your client(optimal)** 
+  * cái này là scope, đối với các hệ thống như **google** hay **facebook** thì mình cần điền cái này để yêu cầu các quyền truy cập
+  * sau này nó sẽ trả về mã token có thể truy cập vào các quyền đấy
+8.**Testing instructions**
+    Điền cái gì cũng được :)))
+
+9.Ấn **Save**
 
